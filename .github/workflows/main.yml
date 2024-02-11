@@ -31,7 +31,7 @@ jobs:
       - name: Dump Schema File
         run: cat ${HOME}/${{ env.FUNCTION_SCHEMA_FILE_NAME }}
       - name: Speckle Automate Function - Build and Publish
-        uses: specklesystems/speckle-automate-github-composite-action@0.8.0
+        uses: specklesystems/speckle-automate-github-composite-action@0.8.1
         with:
           speckle_automate_url: ${{ env.SPECKLE_AUTOMATE_URL || 'https://automate.speckle.dev' }} 
           speckle_token: ${{ secrets.SPECKLE_FUNCTION_TOKEN }}

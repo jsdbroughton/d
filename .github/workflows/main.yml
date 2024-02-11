@@ -28,6 +28,8 @@ jobs:
         id: extract_schema
         run: |
           python main.py generate_schema ${HOME}/${{ env.FUNCTION_SCHEMA_FILE_NAME }}
+      - name: Dump Schema File
+        run: cat ${HOME}/${{ env.FUNCTION_SCHEMA_FILE_NAME }}
       - name: Speckle Automate Function - Build and Publish
         uses: specklesystems/speckle-automate-github-composite-action@0.8.0
         with:
